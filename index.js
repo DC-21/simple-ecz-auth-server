@@ -6,6 +6,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use('/users',require('./routes/router.js'))
 
 app.use((err, red, res, next)=>{
     console.log(err);
